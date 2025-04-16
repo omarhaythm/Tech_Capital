@@ -49,69 +49,69 @@ p {
 #home {
   background: url("../img/home-bg.png") no-repeat center center/cover
     var(--purple);
-}
-#home .container .navBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 120px;
-}
-#home .container .navBar .hamburger {
-  display: none;
-}
-#home .container .navBar ul {
-  display: flex;
-}
-#home .container .navBar .logo {
-  font-size: 32px;
-  color: #fff;
-  font-weight: 700;
-}
-#home .container .navBar ul {
-  display: flex;
-}
-#home .container .navBar ul li a {
-  margin: 0 15px;
-  color: #fff;
-  font-size: 18px;
-  position: relative;
-}
-#home .container .navBar ul li a.active {
-  color: var(--cyan);
-}
-#home .container .navBar ul li a::before {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: var(--cyan);
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transition: all 0.5s ease;
-  transform: translateX(-50%);
-  border-radius: 5px;
-}
-#home .container .navBar ul li a:hover::before {
-  width: 99%;
-}
-#home .container .home-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  column-gap: 7rem;
-  color: #fff;
-  height: calc(100vh - 120px);
-}
-#home .container .home-content .col h1 {
-  font-size: 50px;
-}
-#home .container .home-content .col p {
-  font-size: 14px;
-  margin: 1rem 0 3rem;
-}
-#home .container .home-content img {
-  animation: upDown 5s infinite;
-  max-width: 100%;
+  & .container {
+    & .navBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 120px;
+      & .hamburger {
+        display: none;
+      }
+      & .logo {
+        font-size: 32px;
+        color: #fff;
+        font-weight: 700;
+      }
+      & ul {
+        display: flex;
+        & li {
+          & a {
+            margin: 0 15px;
+            color: #fff;
+            font-size: 18px;
+            position: relative;
+          }
+          & a::before {
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: var(--cyan);
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transition: all 0.5s ease;
+            transform: translateX(-50%);
+            border-radius: 5px;
+          }
+          & a:hover::before {
+            width: 99%;
+          }
+        }
+      }
+    }
+    & .home-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      column-gap: 7rem;
+      color: #fff;
+      height: calc(100vh - 120px);
+      & .col {
+        & h1 {
+          font-size: 50px;
+        }
+        & p {
+          font-size: 14px;
+          margin: 1rem 0 3rem;
+        }
+      }
+      & img {
+        animation: upDown 5s infinite;
+        max-width: 100%;
+      }
+    }
+  }
 }
 @keyframes upDown {
   0% {
