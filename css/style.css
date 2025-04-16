@@ -92,7 +92,7 @@ p {
   border-radius: 5px;
 }
 #home .container .navBar ul li a:hover::before {
-  width: 120%;
+  width: 99%;
 }
 #home .container .home-content {
   display: grid;
@@ -350,171 +350,144 @@ p {
 }
 /* Footer End */
 /* Responsive Start */
-/* Tablet */
-@media (max-width: 900px) {
-  #team .row .col:first-child h3 {
-    font-size: 17px;
+@media (max-width: 830px) {
+  #home {
+    & .container {
+      & .navBar {
+        flex-direction: column;
+        height: auto;
+        padding: 3rem 0 0 0;
+        position: relative;
+        & .logo {
+          font-size: 24px;
+          margin-bottom: 5px;
+          padding-bottom: 5px;
+          border-bottom: 3px solid white;
+        }
+        & ul.open {
+          display: flex;
+        }
+        & ul {
+          display: none;
+          flex-direction: column;
+          width: 90%;
+          text-align: center;
+          & li {
+            margin: 5px 0;
+            & a {
+              display: block;
+              font-size: 16px;
+              margin: 0;
+              padding: 5px;
+              transition: all 0.5s ease;
+            }
+            & a:hover::before {
+              width: 0;
+            }
+            & a:hover {
+              color: var(--cyan);
+              transform: rotate(3deg) scale(1.1);
+            }
+          }
+        }
+        & .hamburger {
+          display: block;
+          position: absolute;
+          top: 3rem;
+          right: 20px;
+          cursor: pointer;
+          & span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+          }
+        }
+        & .hamburger.active {
+          & span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+          }
+          & span:nth-child(2) {
+            opacity: 0;
+          }
+          & span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+          }
+        }
+      }
+      & .home-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        & .col h1 {
+          font-size: 27px;
+        }
+        & img {
+          display: none;
+        }
+      }
+    }
   }
-  #team .row .col:nth-child(2) h3 {
-    font-size: 15px;
+  #services {
+    & .container {
+      & .row {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+      }
+    }
   }
-  #team .row .col p {
-    font-size: 14px;
+  #about {
+    & .container {
+      & .row {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+        text-align: center;
+      }
+    }
   }
-  #team .row .col:first-child p {
-    font-size: 12px;
+  #whyUs {
+    & .container {
+      & .row {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+        text-align: center;
+        & p {
+          max-width: 500px;
+          margin: auto;
+        }
+      }
+    }
   }
-  #team .row .col .socialLinks,
-  #footer .row .col-1 .social {
-    margin-top: 20px;
+  #team {
+    & .container {
+      & .row {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+        text-align: center;
+      }
+    }
   }
-  #team .row .col .socialLinks a:not(:last-child),
-  #footer .row .col-1 .social a:not(:last-child) {
-    margin-right: 5px;
+  #customers {
+    & .container {
+      & .row {
+        grid-template-columns: 1fr;
+        row-gap: 5rem;
+        text-align: center;
+      }
+    }
   }
-  #team .row .col .socialLinks a,
-  #footer .row .col-1 .social a {
-    font-size: 20px;
-  }
-  #footer .footer-content .row {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem 0rem;
-  }
-  #footer .footer-content .row ul li {
-    margin-bottom: 10px;
-  }
-}
-/* Small tablets */
-@media (max-width: 770px) {
-  #team .row .col h3 {
-    line-height: 1.4;
-  }
-  #team .row .col:first-child p {
-    line-height: 1.4;
-  }
-  #team .row .col .socialLinks,
-  #footer .row .col-1 .social {
-    margin-top: 20px;
-  }
-  #team .row .col .socialLinks a:not(:last-child),
-  #footer .row .col-1 .social a:not(:last-child) {
-    margin-right: 8px;
-  }
-  #team .row .col .socialLinks a,
-  #footer .row .col-1 .social a {
-    font-size: 20px;
+  #footer {
+    & .container {
+      & .row {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        text-align: center;
+      }
+    }
   }
   .copyright {
-    padding: 3rem 1rem;
-    text-align: center;
+    padding: 3rem 0;
   }
 }
-/* Phones */
-@media (max-width: 450px) {
-  #home .container .navBar {
-    flex-direction: column;
-    height: auto;
-    padding: 3rem 0 0 0;
-    position: relative;
-  }
-  #home .container .navBar .logo {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  #home .container .navBar ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-  #home .container .navBar ul.open {
-    display: flex;
-  }
-  #home .container .navBar ul li {
-    margin: 5px 0;
-  }
-  #home .container .navBar ul li a {
-    font-size: 16px;
-    margin: 0;
-    padding: 10px;
-    display: block;
-  }
-  #home .container .navBar ul li a::before {
-    bottom: 5px;
-  }
-  #home .container .navBar ul li a:hover::before {
-    width: 105%;
-  }
-  #home .container .navBar .hamburger {
-    display: block;
-    position: absolute;
-    top: 3rem;
-    right: 20px;
-    cursor: pointer;
-  }
-  #home .container .navBar .hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-  }
-  #home .container .navBar .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  #home .container .navBar .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-  #home .container .navBar .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-  }
-  #whyUs .container .row,
-  #team .container .row,
-  #customers .container .row,
-  #services .container .row,
-  #about .container .row,
-  #footer .container .row {
-    grid-template-columns: 1fr;
-    row-gap: 4rem;
-  }
-  #home .row {
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 7rem;
-  }
-  #footer .copyright p {
-    font-size: 15px;
-  }
-}
-@media (min-width: 451px) {
-  #home .container .navBar .hamburger {
-    display: none;
-  }
-  #home .container .navBar ul {
-    display: flex;
-  }
-}
-@media (max-width: 350px) {
-  #home .container .navBar .logo {
-    font-size: 20px;
-    margin-right: 50px;
-  }
-  #home .home-content {
-    min-height: 100vh;
-  }
-  #home .container .home-content .col h1 {
-    font-size: 35px;
-    margin-bottom: 20px;
-  }
-  #customers h2 {
-    font-size: 17px;
-  }
-  #footer .footer-content .row:first-child ul li {
-    font-size: 11px;
-  }
-  #footer .footer-content .row:first-child ul li i {
-    margin-right: 2px;
-  }
-}
-/* Responsive Start */
+/* Responsive End */
